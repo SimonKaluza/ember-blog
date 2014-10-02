@@ -2,12 +2,16 @@
 <p>
 One day, there will be riveting articles and enthralling discussions about various topics in software programming, design, and security here.  For now, hopefully the clean and fast page transitions of Ember MVC and the slick, responsive Bootstrap UI will keep you coming back for more.
 </p>
+<hr class="col-md-12">
 <div class="row">
   <div class="col-md-3" id="leftCol">        	
 	<div class="well"> 
 	  <ul class="nav nav-stacked" id="sidebar">
-  	  {{outlet}}
+  	  {{#each}}
+        <li><a href="#{{title}}">{{title}}</a></li>
+      {{/each}}
 	  </ul>
 	</div>
   </div>
+  {{outlet}}
 </div>
